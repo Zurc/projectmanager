@@ -7,22 +7,27 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-        projects: [
-            {
-                title: 'Business website',
-                category: 'Web Design'
-            },
-            {
-                title: 'Social App',
-                category: 'Mobile Development'
-            },
-            {
-                title: 'Ecommerce Shopping Cart',
-                category: 'Web Development'
-            },
-        ]
+        projects: []
     }
   }
+
+  componentWillMount() {  // fires off everytime the component is re rendered
+    this.setState({projects: [
+      {
+          title: 'Business website',
+          category: 'Web Design'
+      },
+      {
+          title: 'Social App',
+          category: 'Mobile Development'
+      },
+      {
+          title: 'Ecommerce Shopping Cart',
+          category: 'Web Development'
+      }
+    ]})
+  }
+
   render() {
     return (
       <div className="App">
