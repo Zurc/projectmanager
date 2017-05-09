@@ -31,6 +31,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Project Manager</h1>
+        <hr/>
         <Projects projects={this.state.projects}/>
       </div>
     );
