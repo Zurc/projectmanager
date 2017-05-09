@@ -29,11 +29,12 @@ class App extends Component {
   }
 
   render() {
+    let { projects } = this.state;
     return (
       <div className="App">
         <h1>Project Manager</h1>
         <hr/>
-        <Projects projects={this.state.projects}/>
+        <Projects projects={projects}/>
       </div>
     );
   }
